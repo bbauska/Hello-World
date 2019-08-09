@@ -1,63 +1,132 @@
 # Hello-World
 Simple Hello-World repository from online GitHub help
-<!DOCTYPE <html>
+!DOCTYPE <html>
 <html>
+
+<!-- FOLLOWING DOES NOT, I REPEAT NOT WORK!!
+<div>
+  You have visited this page <span id=”report”> </span> times.
+</div>
+<script>
+  var timesVisited = 0;
+  if (localStorage.timesVisited) {
+    timesVisited = parseInt(localStorage.timesVisited);
+  }
+  timesVisited += 1;
+  localStorage.setItem(‘timesVisited’, timesVisited);
+  var report = document.getElementById(‘report’);
+  report.innerHTML = timesVisited;
+  if (timesVisited > 10)
+    report.style.backgroundColor = ‘red’;
+</script>
+-->
+You have accessed this page <span id="report"></span> times.
+<p>
+Your last visit was; <span id="lastVisitDate"></span>.
+<script>
+
+var timesVisited = 0;
+var lastVisitDate = 'never';
+<!-- If true, then do.  -->
+if (localStorage.lastVisit) {
+    var lastVisit = JSON.parse(localStorage.getItem('lastVisit')); 
+    timesVisited = lastVisit.numVisits;
+	lastVisitDate = lastVisit.date
+}
+
+document.getElementById('lastVisitDate').innerHTML = lastVisitDate;
+
+timesVisited++;
+document.getElementById('report').innerHTML = timesVisited;
+
+var myLastVisit = {};
+myLastVisit.date = new Date()  //year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);  // new Date();
+myLastVisit.numVisits = timesVisited;
+
+localStorage.lastVisit = JSON.stringify(myLastVisit);
+</script>
+
+
 <head>
-
-<!--
-<title>NETWORK OPERATIONS CENTER (NOC)</title>
-<link href="css/bootstrap.min.css" rel="stylesheet"/>
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-
-body {margin:0;}
-
-u1 {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #333;
-	position: fixed;
-	width: 100%;
+body {
+  margin: 12px;
+  font-family: Arial, Helvetica, sans-serif;
 }
-li {
-	float: left;
+.topnav {
+  overflow: hidden;
+  background-color: #333;
 }
-li a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
+.topnav a {
+  float: left;
+  display: block;
+  color: f2f2f2;
+  text-align: center;
+  padding; 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
-li a:hove:not(.active) {
-	background-color:#111;
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
 }
-
-.active {
-	background-color: #4caf50;
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.topnav .icon {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) (display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 10px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
 </style>
 </head>
 <body>
-<ul>
-  <li><a class="active" href="#home">NOC Home</a></li>
-  <li><a href="#jobdesc">Job Desc'n</a></li>
-  <li><a href="#chk">Daily Check</a></li>
-  <li><a href="fredi">Add Fredi</a></li>
-  <li><a href="dthp">Create DTHP</a></li>
-</ul>
+<!-- myTopnav: navigation bar for NOC Reference Manual -->
+<div
+class="topnav" id="myTopnav">
+  <a href="#home" class="active">| NOC Home |</a>
+  <a href="#dailychk">| Daily Check |</a>
+  <a href="#fredi">| Add Fredi |</a>
+  <a href="#dthp">| Create DTHP |</a>
+  <a href="#acronyms">| Acrnms |</a>
+  <a href="#linux">| Linux |</a>
+  <a href="#citkm">| C-I-T-K-M |</a>
+  <a href="#towers">| Towers |</a>
+
+<!--  <a href="contact">Contact</a>
+  <a href="about">About</a>
 -->
 
-<!--
-<div style="padding:20px; margin-top:30px;background-color:#1abc9c;height:1500px;">
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa bars"></i>
+  </a>
 </div>
--->
+    
 <style>
 div {
+  id="home";
   background-color: #808000;
   color: #ffffff;
   padding: 20px;
@@ -66,19 +135,18 @@ div {
 <center>
 <div>
 <title>NETWORK OPERATIONS CENTER (NOC)</title>
-
 <h1 style="font-size:200%">NETWORK OPERATIONS CENTER (NOC) </h1>
-
 <h2 style="font-size:200%">OPERATOR USER MANUAL 'HIGHLIGHTS'
 <br>for: RAVENSWOOD SOLUTIONS</h2>
 </center>
 
 <body style="font-size:150%";color="ff5733">
 
+<!-- home: NOC home page - NOC Reference Manual -->
 <p style="font-size:150%";color="009900">
 <big>
-<h2 id="jobDesc">
-
+<!-- jobdesc: Job Description -->
+<h2 id="jobdesc">
 NOC Operator Job Description </big></p>
 <ul style="font-size:100%";color="009900"><li>	Monitor the training and tracking of troops during their exercises. </li>
 <li>	Operate radios and communicate with other staff members to assist with a variety of situations. </li>
@@ -90,14 +158,14 @@ NOC Operator Job Description </big></p>
 </ul>
 <font color="9900cc">
 <p style="font-size:100%";color="9900cc">
-
 </div>
 
+<!-- Frequently used Linux commands & descriptions -->
 <br>
+<p id="linux">
 <big>
 Linux v7.6
 </big></p>
-<p>
 Frequently used Linux commands & descriptions;
 </p>
 <ul>
@@ -115,7 +183,7 @@ Frequently used Linux commands & descriptions;
 <li>	<b>head</b>  - reads the first 10 lines of any given file name.</li>
 <li>	<b>history</b>  - print out the bash history of the current user to the screen.  Commands are numbered, with old commands at the top and newer commands at the bottom.  The history is stored in the ~/bash_history file by default.</li>
 <li>	<b>ls</b>  - list - Linux shell command that lists information about about files and directories.  Part of the GNU core utilites which are installed on all Linux distributions. </li>
-<li>	<b>man</b>  - manual - interface to the on-line reference manuals.  It provides a detailed view of the command which includes NAME, SYNOPSIS, DESCCRIPTION, OPTIONS, EXIT STATUS, RETURN VALUES, ERRORS, FILES, VERSIONS, EXAMPLES, AUTHORS and SEE ALSO.</li>
+<li>	<b>man</b>  - manual - interface to the on-line reference manuals.  It provides a detailed view of the command which includes NAME, SYNOPSIS, DESCRIPTION, OPTIONS, EXIT STATUS, RETURN VALUES, ERRORS, FILES, VERSIONS, EXAMPLES, AUTHORS and SEE ALSO.</li>
 <li>	<b>ping</b>  - Ping or Packet Internet Groper - It uses ICMP (Internet Control Message Protocol) to communicate to other devices. </li>
 <li>	<b>tail</b>  - reads the last 10 lines of any given file name.</li>
 <li>	<b>top</b>  - task manager program - displays processor activity of your Linux box (cpu and memory) and also displays tasks managed by kernel in real-time. </li>
@@ -147,7 +215,9 @@ Terminal: GNOME v3.28.2 - a free and open-source desktop environment for Unix-li
 <u>G</u>NU <u>N</u>etwork <u>O</u>bject <u>M</u>odel <u>E</u>nvironment
 </p>
 
-<p><big>
+<p>
+
+<big>
   ORION - Running SAIPH & RIGEL
 </big></p>
 
@@ -158,10 +228,12 @@ Terminal: GNOME v3.28.2 - a free and open-source desktop environment for Unix-li
 <li>	Check for duplicate Miles using MilesChecker.sh in /usr/local/Orion/orion-common/ save copy in ~/Desktop/Miles-mmddyy-hhmm.csv.</li>
 <li>	Check freddies for NON-green.</li>
 </ul>
+<!-- dailychk: Daily NOC Operator Checklist -->
 <br>
-<p id="chk">
+<p id="dailychk">
 <font color="FF33FF"><big>
-DAILY NOC Operator Checklist;</big></p>
+<center>
+DAILY NOC Operator Checklist;</center></big></p>
 <ol><li>
 	Check with shift leads for any shift assignments.</li>
 <li>	Check white board for info from previous shifts.</li>
@@ -178,16 +250,20 @@ DAILY NOC Operator Checklist;</big></p>
 <li>	Write any cross info on white board for next shift(s).</li>
 </ol>
 <br>
+<br>
+<br>
+<br>
+<!-- fredi: Adding a FREDI -->
 <p id="fredi">
 <font color="CC0000"><big>
-ADDING A FREDI/EDI
-</big></p>
+<center>
+ADDING A FREDI/EDI</center></big></p>
 <ol>
 <li>  Click <b>Applications</b> >  <b>Orion</b> > <b>Saiph</b>.</li>
 <li>  With Saiph open, click <b>"New"</b> <i>Top left of entity window;</i></li>
-<li>  Enter <b>Instument ID:</b> <i>This will be the number of EDI/FREDI;</i></li>
+<li>  Enter <b>Instrument ID:</b> <i>This will be the number of EDI/FREDI;</i></li>
 <li>  Select the <b>Network ID</b> associated with the device you are entering;<br><i>(White = 8, Yellow = 9, Blue = 10, and Red = 11)</i></br></li>
-<li>  Set <b>Update interval</b> as instructed;</li>
+<li>  Set <b>Update Interval</b> as instructed;</li>
 <li>  <b>Entity Type:</b> Human or Platform?</li>
 <li>  Select <b>Type ...</b></li>
 <li>  <b>Name;</b> (ex: Last Name, First Name)</li>
@@ -195,9 +271,12 @@ ADDING A FREDI/EDI
 <li>  Select <b>Unit</b>; (ex: 1-161 IN: A Co IN: HQ)</li>
 <li>  Click <b>"Save"</b> </li>
 </ol>
+<br><br><br><br>
+
 <font color="0099CC">
 <br>
-<p><big>
+<!-- C-I-T-K-M: Check Definitions -->
+<p id="citkm"><big>
 <b><u>C-I-T-K-M Definitions</u></b>
 </p></big>
 <b><u>C = Comm</u></b>
@@ -230,28 +309,28 @@ ADDING A FREDI/EDI
 		M-Red:   Device and Miles do not have a proper PID number<br>
 		M-Green: Device and Miles have proper PID and can produce and receive shotlines.<br>
 </blockquote>
-<br>  <b><u>Miles Shot/Hit Definitions</u></b></br>
+<br><b><u>Miles Shot/Hit Definitions</u></b></br>
 <blockquote>
-		Paired dots with a line means message received from both devices and produced a "shotline".  This will show which devices are associated with the reported PIDS.<br>
-<br>  
+		Paired dots with a line means message received from both devices and produced a "shotline".  This will show which devices are associated with the reported PIDs.<br>
+<br>
 		A single dot means that the system received a message that reported a shot.  There may be a hit but it won't be from the same device that shot.  Miles shots are reported by who was hit.<br>
-<br>  
+<br>
 		An animated white circle means the system received a message that an entity was hit.  If one has an improper PID, a shotline may not show but there will be a hit.<br>
-<br>  
+<br>
 		The color of the dots and lines are determined by what group the device is under.  (Blue = Friendly, Red = Hostile and Grey = Unknown).
 </blockquote>
 </p>
+<!-- dthp: Creating a DVD Take Home Package -->
 <br>
 <font color="3333FF">  <!-- blue -->
-<p id="dthp"><big>
-CREATING A DVD TAKE HOME PACKAGE (DTHP)
-</big></p>
+<p id="dthp"><p><b><big><center>
+CREATING A DVD TAKE HOME PACKAGE (DTHP)</center></big></b></p>
 <ol>
-<li>  Click <b>Applications</b> > <b>Orion</b> ><b> Take-Home Package Builder</b><br>  With information provided by the TAC chief or AARPTL, create each DTHP as follows;</br>
+<li>  Click <b>Applications</b> > <b>Orion</b> ><b> Take Home Package Builder</b><br>  With information provided by the TAC chief or AARPTL, create each DTHP as follows;</br>
 <li>  Select the appropriate package <br></li>
 	(For example, TAC2.local-15 is the 15th package created by TAC2. The timestamp is at the front of the filename).</br></li>
 <li>  Click <b>Create Package</b> (bottom button).<br>
-   While process is running, take a blank CD and use a fine sharpie to write the TAC line info on the disk (ex; TAC 3) unit name, date/time of lane, lane number and type of exercie (ex; company attack).</li>
+   While process is running, take a blank CD and use a fine Sharpie to write the TAC line info on the disk (ex; TAC 3) unit name, date/time of lane, lane number and type of exercie (ex; company attack).</li>
 <li>  Put the disk in the PROPER client server CD slot
 <li>  Insert an unused DVD with the XCTC exercise information pre-printed on it.</li>
 <li>  Click <b>Burn</b> in the lower right-hand corner of the screen.</li>
@@ -262,9 +341,12 @@ CREATING A DVD TAKE HOME PACKAGE (DTHP)
 <br>  <b>EACH MASTER MUST BE CHECKED!!! (See Next Paragraph; CHECKING PACKAGES)</b><br>
 </ol>
 <br>
-<p style="color:ff6200";"font-size=200%">  <!-- medium brown -->
-<big><b>CHECKING PACKAGES</b></big>
-<ol style="color:ff6200";"font-size=100%"><br>  <!--; "color = ff1199"><br>  -->
+<!-- chkpkg: Check Package -->
+
+<font color="ff6200">
+<p id-"chkpkg";style="font-size=200%">  <!-- medium brown -->
+<big><b><center>CHECKING PACKAGES</center></b></big></p>
+<ol style="font-size=100%";"margin-left: 10px"><br>
 Note:  Use one of the laptops available.  Check with your Lead or FAE to see which laptop can be used.<br><br>
 <li>  Click <b>Open Folder</b> to review files in FLEXTRAIN GUMP.</li>
 <li>  Double-click <b>Setup</b> and set destination to <b>Desktop</b> if needed.</li>
@@ -282,17 +364,350 @@ Note:  Use one of the laptops available.  Check with your Lead or FAE to see whi
 	Click <b>UNINSTALL<b><br>
 	Now, ready for next disk.
 </ol>
-<font color="00FF99">
-<br>
-
 </p>
+<br>
+<!-- acronyms: Acronyms used by the NOC -->
+<font color="oe6251">
+<p id="acronyms">
+<b><big><center>
+NETWORK OPERATIONS CENTER (NOC) COMMONLY USED ACRONYMS</center></big></b>
+<br>
+<style>
+ table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+tr {
+  text-align:center;
+}
+</style>
+</head>
+<body>
+<table style="width:50%">
+  <tr>
+    <th>Acronym</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>AAR</td>
+    <td><b>A</b>fter-</b><b>A</b>ction <b>R</b>eview</td>
+  </tr>
+  <tr>
+    <td>AARPTL</td>
+    <td><b>A</b>fter-<b>A</b>ction <b>R</b>eview <b>P</b>roduction <b>T</b>eam-<b>L</b>eader</td>
+  </tr>
+  <tr>
+    <td>CAC</td>
+    <td><b>C</b>ommon <b>A</b>ccess <b>C</b>ard</td>
+  </tr>
+  <tr>
+    <td>COB</td>
+    <td><b>C</b>ivilian <b>O</b>n the <b>B</b>attlefield</td>
+  </tr>
+  <tr>
+    <td>COP</td>
+    <td><b>C</b>ommon <b>O</b>perating <b>P</b>icture</td>
+  </tr>
+  <tr>
+    <td>DTHP</td>
+    <td><b>D</b>igital <b>T</b>ake-<b>H</b>ome <b>P</b>ackage</td>
+  </tr>
+  <tr>
+    <td>DVR</td>
+    <td><b>D</b>igital <b>V</b>ideo <b>R</b>ecorder</td>
+  </tr>
+  <tr>
+    <td>EDI</td>
+    <td><b>E</b>nhanced <b>D</b>ismount <b>I</b>nstrumentation</td>
+  </tr>
+  <tr>
+    <td>ESC</td>
+    <td><b>E</b>xercise <b>S</b>upport <b>C</b>ell</td>
+  </tr>
+  <tr>
+  <tr>
+    <td>EXCON</td>
+    <td><b>E</b>xercise <b>C</b>ontrol</td>
+  </tr>    <td>FAE</td>
+    <td><b>F</b>ield <b>A</b>pplication <b>E</b>ngineer</td>
+  </tr>
+  <tr>
+    <td>FOB</td>
+    <td><b>F</b>orward <b>O</b>perations <b>B</b>ase</td>
+  </tr>
+  <tr>
+    <td>FREDI</td>
+    <td><b>F</b>irst <b>R</b>esponder <b>E</b>nhanced <b>D</b>ismount <b>I</b>nfantry</td>
+  </tr>
+  <tr>
+    <td>FSR</td>
+    <td><b>F</b>ield <b>S</b>ervice <b>R</b>epresentative</td>
+  </tr>
+  <tr>
+    <td>GPS</td>
+    <td><b>G</b>lobal</b> <b>P</b>ositioning <b>S</b>ystem</td>
+  </tr>
+  <tr>
+    <td>GUI</td>
+    <td><b>G</b>raphic <b>U</b>ser <b>I</b>nterface</td>
+  </tr>
+  <tr>
+    <td>HBSS</td>
+    <td><b>H</b>ost <b>B</b>ased <b>S</b>ecurity <b>S</b>ystem</td>
+  </tr>
+  <tr>
+    <td>HHV</td>
+    <td><b>H</b>and <b>H</b>eld <b>V</b>ideo</td>
+  </tr>
+  <tr>
+    <td>I&C</td>
+    <td><b>I</b>nstrumentation <b>&</b> <b>C</b>ommunications</td>
+  </tr>
+  <tr>
+    <td>IED</td>
+    <td><b>I</b>mprovised <b>E</b>xplosive <b>D</b>evice</td>
+  </tr>
+  <tr>
+    <td>IPA</td>
+    <td><b>I</b>dentify <b>P</b>olicy <b>A</b>udit (Security System)</td>
+  </tr>
+  <tr>
+    <td>Lane</td>
+    <td>Reference to the geographical location where training begins and ends</td>
+  </tr>
+  <tr>
+    <td>LOS</td>
+    <td><b>L</b>ine <b>O</b>f <b>S</b>ight</td>
+  </tr>
+  <tr>
+    <td>MAARC</td>
+    <td><b>M</b>obile <b>A</b>fter <b>A</b>ction <b>R</b>eview <b>C</b>enter</td>
+  </tr>
+  <tr>
+    <td>MGRS</td>
+    <td><b>M</b>ilitary <b>G</b>rid <b>R</b>efence <b>S</b>ystem</td>
+  </tr>
+  <tr>
+    <td>MILES</td>
+    <td><b>M</b>ultiple <b>I</b>ntegrated <b>L</b>aser <b>E</b>ngagement <b>S</b>ystem</td>
+  </tr>
+  <tr>
+    <td>NOC</td>
+    <td><b>N</b>etwork <b>O</b>perations <b>C</b>enter</td>
+  </tr>
+  <tr>
+    <td>NOTL</td>
+    <td><b>N</b>etwork <b>O</b>perations <b>T</b>eam <b>L</b>eader</td>
+  </tr>
+  <tr>
+    <td>OC</td>
+    <td><b>O</b>bserver/<b>C</b>ontroller</td>
+  </tr>
+  <tr>
+    <td>OPFOR</td>
+    <td><b>O</b>position <b>F</b>orce</td>
+  </tr>
+  <tr>
+    <td>OUM</td>
+    <td><b>O</b>perator <b>U</b>ser <b>M</b>anual</td>
+  </tr>
+  <tr>
+    <td>PID</td>
+    <td><b>P</b>layer <b>I</b>dentification</td>
+  </tr>
+  <tr>
+    <td>PIN</td>
+    <td><b>P</b>ersonal <b>I</b>dentification <b>N</b>umber</td>
+  </tr>
+  <tr>
+    <td>PSOC</td>
+    <td><b>P</b>roducts and <b>S</b>ervices <b>O</b>peration <b>C</b>enter</td>
+  </tr>
+  <tr>
+    <td>RSOI</td>
+    <td><b>R</b>eception <b>S</b>taging <b>O</b>nward movement <b>I</b>ntegration</td>
+  </tr>
+  <tr>
+    <td>SINCGARS</td>
+    <td><b>S</b>ingle-<b>C</b>hannel <b>G</b>round and<b>A</b>irborne <b>R</b>adio <b>S</b>ystem</td>
+  </tr>
+  <tr>
+    <td>TAC</td>
+    <td><b>T</b>actical <b>A</b>nalysis <b>C</b>enter</td>
+  </tr>
+  <tr>
+    <td>UPS</td>
+    <td><b>U</b>ninterruptable <b>P</b>ower <b>S</b>upply</td>
+  </tr>
+  <tr>
+    <td>VTHP</td>
+    <td><b>V</b>ideo <b>T</b>ake-<b>H</b>ome <b>P</b>ackage</td>
+  </tr>
+  <tr>
+    <td>XCTC</td>
+    <td>e<b>X</b>portable <b>C</b>ombat <b>T</b>raining <b>C</b>enter</td>
+  </tr>
+  <tr>
+    <td>Tango-Mike</td>
+    <td><b>T</b>hanks <b>M</b>uch</td>
+  <tr>
+    <td>Lima-Charlie</td>
+    <td><b>L</b>oud and <b>C</b>lear</td>
+  </tr>
+  </tr>
+</table>
+</body>
+</p><br><br><br>
 
+<!-- troubleshooting tower relays -->
+<font color="green">
+<p id="towers">
+<b><center>
+TROUBLESHOOTING TOWER RELAYS</center></b>
+<br>
+<style>
+ table, th, td {
+  border: 1px solid green;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: left;
+tr {
+  text-align:center;
+}
+
+</style>
+
+<center>
+<h4><b>
+IP ADDRESS 10.51.10. </b>
+</h4>
+<h5>
+(FIRST THREE OCTETS NEVER CHANGE)
+</h5>
+
+<!-- <body style="font-size:125%"> -->
+<table align="left">  <!-- style="width:50%">  -->
+<style>
+.left {
+  font-size:125%;
+  position: absolute;
+  left: 10px;
+  width: 300px;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+</style>
+
+  <colgroup align="left">
+    <col style="background-color:lightgreen">
+    <col style="background-color:white">
+    <col style="background-color:yellow">
+    <col style="background-color:blue">
+    <col style="background-color:red">
+  </colgroup>
+  <tr>
+    <th> </th>
+    <th><b>NET 8</b></th>
+    <th><b>NET 9</b></th>
+    <th><b>NET 10</b></th>
+    <th><b>NET 11</b></th>
+  </tr>
+  <tr>
+    <td>MASTER</td>
+    <td>.80</td>
+    <td>.90</td>
+    <td>.100</td>
+    <td>.110</td>
+  </tr>
+  <tr>
+    <td>RELAY 1</td>
+    <td>.81</td>
+    <td>.91</td>
+    <td>.101</td>
+    <td>.111</td>
+  </tr>
+  <tr>
+    <td>RELAY 2</td>
+    <td>.82</td>
+    <td>.92</td>
+    <td>.102</td>
+    <td>.112</td>
+  </tr>
+  <tr>
+    <td>RELAY 3</td>
+    <td>.83</td>
+    <td>.93</td>
+    <td>.103</td>
+    <td>.113</td>
+  </tr>
+  <tr>
+    <td>RELAY 4</td>
+    <td>.84</td>
+    <td>.94</td>
+    <td>.104</td>
+    <td>.114</td>
+  </tr>
+  <tr>
+    <td>RELAY 5</td>
+    <td>.85</td>
+    <td>.95</td>
+    <td>.105</td>
+    <td>.115</td>
+  </tr>
+  <tr>
+    <td>RELAY 2A</td>
+    <td>.86</td>
+    <td>.96</td>
+    <td>.106</td>
+    <td>.116</td>
+  </tr>
+  <tr>
+    <td>RELAY 3A</td>
+    <td>.87</td>
+    <td>.97</td>
+    <td>.107</td>
+    <td>.117</td>
+  </tr>
+  <tr>
+    <td>RELAY 4A</td>
+    <td>.88</td>
+    <td>.98</td>
+    <td>.108</td>
+    <td>.118</td>
+  </tr>
+  <tr>
+    <td>RELAY 5A</td>
+    <td>.89</td>
+    <td>.99</td>
+    <td>.109</td>
+    <td>.119</td>
+  </tr>
+<br><br><br><br>
+<!-- Times visited -->
+<div>
+  You have visited this page <span id=”report”> </span> times.
+</div>
+<script>
+  var timesVisited = 0;
+  if (localStorage.timesVisited) {
+    timesVisited = parseInt(localStorage.timesVisited);
+  }
+  timesVisited += 1;
+  localStorage.setItem(‘timesVisited’, timesVisited);
+  var report = document.getElementById(‘report’);
+  report.innerHTML = timesVisited;
+  if (timesVisited > 10)
+    report.style.backgroundColor = ‘red’;
+</script>
 
 <!--
-   CSS = Cascade Style Sheet 
-   HTML = Hypertext Markup Language
-   Javascript = Programming language of HTML & the WEB  -->
-</body>
+<p id="goto here">
 </html>
 
 
