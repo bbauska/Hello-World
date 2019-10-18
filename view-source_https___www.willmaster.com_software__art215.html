@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>WillMaster Software and Web Tools for Your WebSite </title>
+
+<meta name="description" content="Web Tools and software for your website from WillMaster."/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+<link href="//www.willmaster.com/16willmaster.css?20180512B" rel="stylesheet" type="text/css"><link rel="alternate" type="application/rss+xml" title="RSS" href="//www.willmaster.com/index.xml">
+<link rel="alternate" type="application/atom+xml" title="Atom" href="//www.willmaster.com/atom.xml">
+<script type="text/javascript" src="/software/software.js"></script> 
+</head>
+<body>
+
+<script>var DeviceType='';</script>
+<!-- BEGIN masthead -->
+
+<div id="masthead" class="only-for-browser">
+
+<div id="masthead-above-desktop-menu"><!-- Is position:relative for the position:absolute divs within the masthead -->
+
+<!-- Masthead slogan and PDF download button div set -->
+<div id="positioning-anchor-for-masthead-slogan-and-PDF-download-button" style="display:block;">
+
+<div id="masthead-slogan-and-PDF-download-button" style="display:table;">
+
+<div id="masthead-slogan-text" style="display:block;">Software, your way.</div>
+
+<div 
+    id="masthead-PDF-download-button"
+	onclick="DOWNLOAD()"
+	onmousedown="PowerhouseStyleChange('masthead-PDF-download-button','background-color:#efefef; border-style:inset; box-shadow:1px 1px 3px 1px #dcdcdc inset;')"
+	onmouseup="PowerhouseStyleChange('masthead-PDF-download-button','background-color:#fafafa; border-style:outset; box-shadow:1px 1px 3px 1px #dcdcdc;')"
+>
+How To Get Good <span style="white-space:nowrap;">Custom Software</span>
+<div style="font-size:.8em; font-weight:normal; position:absolute; left:3px; top:-2px;">(Download)</div>
+<div style="font-size:.8em; font-weight:normal; position:absolute; right:3px; top:-2px;">(PDF)</div>
+</div><!-- id="masthead-PDF-download-button" -->
+</div><!-- id="masthead-slogan-and-PDF-download-button" -->
+</div><!-- id="positioning-anchor-for-masthead-slogan-and-PDF-download-button" -->
+<script>
+function DOWNLOAD()
+{
+    location.href="https://willmaster.com/docs/public/HowToGetGoodCustomSoftware.pdf?from="+document.URL
+}
+</script>
+<!-- Masthead slogan and PDF download button div set -->
+
+
+<div id="toprightnav">
+<span id="masthead-contact-us"><a href="/contact.php">Contact Us</a></span> 
+<a href="https://www.willmaster.com/software/WebSitesSecret/entry.php">Log In to WebSite's Secret</a>
+<br>&nbsp;<!-- Blank line to keep positioning same as 2-line "logged in" notice. -->
+</div><!-- id="toprightnav" -->
+
+
+<div id="logo"><!-- Is position:relative -->
+<a href="/" title="WillMaster Website Tools"><img src="//www.willmaster.com/images/wmlogo_icon.gif" alt="Willmaster.com logo" width="50" height="50" border="0"></a>
+<div id="nameline"><!-- Is position:absolute -->
+WillMaster
+</div><!-- id="nameline" -->
+</div><!-- id="logo" -->
+
+
+
+
+<!-- Search box spot. Will be copied into here from end of page. -->
+<div id="goosearchbox"><form action="//www.willmaster.com/searchresults.php" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-5682027871056143:9053692136" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <nobr><input type="text" name="q" size="20" style="width:130px;"><input type="submit" name="sa" value="Search" /></nobr>
+  </div>
+</form></div><!-- Is position:absolute. Will be moved to replace menu bar on phones. -->
+
+<script type="text/javascript">
+document.cookie = 'CurrentLocation='+document.URL+'; path=/';
+</script>
+
+
+
+<!-- BEGIN: Burger icon and menu. -->
+
+<div id="masthead-burger-icon"><!-- Is position:absolute and display:none. Will be moved to old search box position and made visible for phones. -->
+<img src="//www.willmaster.com/images/burger-willmaster.png"
+	style="width:42px; height:26px; border:none; cursor:pointer;" 
+	onclick="MobileMenuOnOff()" 
+	alt="burger menu icon">
+</div><!-- id="masthead-burger-icon" -->
+
+<div id="masthead-burger-menu" style="display:none;"><!-- Is position:absolute and display:none. Will be moved into position and made visible for phones. -->
+<!-- Can be designed as you wish. Position with #masthead-burger-menu in style sheet. -->
+<div class="burger-nav-content" onclick="location.href='/'"><a href="/">Home</a></div>
+<div class="burger-nav-content" onclick="location.href='/software/'"><a href="/software/">Software</a></div>
+<div class="burger-nav-content" onclick="location.href='/software/custom/'"><a href="/software/custom/">Custom</a></div>
+<div class="burger-nav-content" onclick="location.href='/support/'"><a href="/support/">Support</a></div>
+<div class="burger-nav-content" onclick="location.href='/library/'"><a href="/library/">Library</a></div>
+<div class="burger-nav-content" onclick="location.href='/blog/'"><a href="/blog/">Blog</a></div>
+<div class="burger-nav-content" onclick="location.href='/possibilities/'"><a href="/possibilities/">Newsletter</a></div>
+<div class="burger-nav-content" onclick="location.href='/software/WebSitesSecret/'"><a href="/software/WebSitesSecret/">WebSite's Secret</a></div>
+<div class="burger-nav-content" onclick="location.href='/software/information/AlternativePaymentMethods.php'"><a href="/software/information/AlternativePaymentMethods.php">Payments</a></div>
+<div class="burger-nav-content" onclick="location.href='/secure/'"><a href="/secure/">Secure Form</a></div>
+<div class="burger-nav-content" onclick="MobileMenuOnOff()"><span class="pseudolink">Search this Site</span></div>
+</div><!-- id="masthead-burger-menu" -->
+
+<!-- JavaScript to turn display of burger menu off and on. -->
+<script type="text/javascript">
+function MobileMenuOnOff()
+{
+	var d = document.getElementById("masthead-burger-menu");
+	if( d.style.display == "none" ) { d.style.display = "block"; }
+	else { d.style.display = "none"; }
+}
+function CloseBurgerMenu() { document.getElementById("masthead-burger-menu").style.display = "none"; }
+function AppendOnresizeEvent4BurgerMenu(f)
+{
+	var cache = window.onresize;
+	if(typeof window.onresize != 'function') { window.onresize = f; }
+	else { window.onresize = function() { f(); }; }
+}
+AppendOnresizeEvent4BurgerMenu(CloseBurgerMenu);
+CloseBurgerMenu();
+</script>
+
+<!-- END: Burger icon and menu. -->
+
+
+</div><!-- id="masthead-above-desktop-menu" -->
+
+
+<div id="navcontainer"><!-- Will be display:none for phones. -->
+<span class="navcontainer-text"><a href="/" id="home">Home</a></span>
+<span class="navcontainer-text"><a href="/software/">Software</a></span>
+<span class="navcontainer-text"><a href="/software/custom/">Custom</a></span>
+<span class="navcontainer-text"><a href="/support/">Support</a></span>
+<span class="navcontainer-text"><a href="/library/">Library</a></span>
+<span class="navcontainer-text"><a href="/blog/">Blog</a></span>
+<span class="nowrap">
+<span class="navcontainer-text"><a href="/possibilities/">Newsletter</a></span>
+<span class="navcontainer-text"><a href="/software/WebSitesSecret/">WebSite's Secret</a></span>
+<span class="navcontainer-text"><a href="/software/information/AlternativePaymentMethods.php">Payments</a></span>
+<span class="navcontainer-text"><a href="/secure/">Secure Form</a></span>
+</span>
+
+</div><!-- id="navcontainer" -->
+
+<div id="navcontainer-phone-searchspot"></div><!-- Search box will pop into the space this provides for phones. -->
+
+</div><!-- id="masthead" class="only-for-browser" -->
+
+<div class="only-for-printer" style="text-align:center;">
+<img src="//www.willmaster.com/images/wmlogo_icon.gif" width="50" height="50" border="0">
+<span style="
+	font-size: 1.6em; 
+	font-weight:bold;
+	position:relative;
+	top:-16px;
+	color: #666;
+	letter-spacing:2px;
+	padding-left:12px;
+	text-decoration: none; text-shadow: 0px 2px 2px rgba(146, 53, 19, 0.2);">WillMaster</span>
+</div><!-- class="only-for-printer" -->
+
+<!-- END masthead -->
+
+<div id="content-container">
+
+<div id="the-main-content-column">
+
+
+<p class="bold"><a href="/">WillMaster</a> > <a href="/software/">Products</a></p>
+
+
+<h1 style="margin-top:50px;">WillMaster Software and WebSite Tools</h1>
+
+<!-- *** Added JavaScript -->
+<script type="text/javascript">
+function RevealTitles(d) {
+document.getElementById(d+"reveal").style.display="none";
+document.getElementById(d).style.display="block";
+}
+function HideTitles(d) {
+document.getElementById(d+"reveal").style.display="block";
+document.getElementById(d).style.display="none";
+}
+</script>
+
+
+<h2 style="text-align:left;"> <a href="/software/automation-tools/index.php">Automation and Behind the Scenes Tools</a> </h2>
+<p class="bold indent">Software to streamline your website maintenance.<br>Enhance your website performance. </p>
+
+<!-- *** Edited "Click here..." -->
+<p id="automationcatreveal">
+<a href="javascript:GlobalDisplayManagement('automationcat=block','automationcatreveal=none')">Click here</a> to view individual titles.
+</p>
+
+<!-- *** Added div and "Click here to hide individual titles" link. -->
+<div id="automationcat" style="display:none;">
+<p style="text-align:right">
+<a href="javascript:GlobalDisplayManagement('automationcat=none','automationcatreveal=block')">Click here</a> to hide individual titles.
+</p>
+
+
+<h4><a href="/software/cam/index.php">Carefree Ad Manager</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/cam/index.php"><img src="//www.willmaster.com/software/productimages/CarefreeLogo.jpg" width="100"  border="0" alt="Carefree Ad Manager logo" title="Automatic ad testing and publishing"></a></div>
+<div class="indent"><p><p>
+Carefree Ad Manager automatically tests click-through rates to your ads and publishes the better ones more often - helps you make more money with the ads you display on your website.
+</p></p><br class="clearall"></div>
+
+<h4><a href="/software/db-backup-restore/index.php">Database Back Up and Restore V2</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/db-backup-restore/index.php"><img src="//www.willmaster.com/software/db-backup-restore/images/DBbackupRestoreV2.jpg" width="75" height="auto"  border="0"></a></div>
+<div class="indent"><p>Automatically back up MySQL databases with this software for peace of mind.</p><br class="clearall"></div>
+
+<h4><a href="/software/downloadhandler/index.php">Download Handler</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/downloadhandler/index.php"><img src="//www.willmaster.com/software/productimages/DownloadHandlerLogo.jpg" width="75" height="150" border="0"></a></div>
+<div class="indent"><p>From one control panel, manage the downloads and logs of multiple files on your website. Easily track what downloadable files your visitors are really interested in and what pages they are retrieved from. Original download file location is hidden.</p><br class="clearall"></div>
+
+<h4><a href="/software/filesmonitor/index.php">Files Monitor - The Server Hacking Alert System</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/filesmonitor/index.php"><img src="//www.willmaster.com/software/productimages/filesmonitorlogo.jpg" width="100" border=0></a></div>
+<div class="indent"><p>Files Monitor does what it's name implies. It monitors the files on your server and sends you an email alert if any of the files' size or content changes. It also alerts when it finds newly added files and when it finds files missing.</p><br class="clearall"></div>
+
+<h4><a href="/software/goshorturl/index.php">Go Short URL</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/goshorturl/index.php"></a></div>
+<div class="indent"><p>Create short URLs
+with your own control panel, on your own server, and all your short URLs will have
+your own domain name. Free software.</p><br class="clearall"></div>
+
+<h4><a href="/software/pit/index.php">Master Pre-Installation Tester</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/pit/index.php"></a></div>
+<div class="indent"><p>Test your server to see if it meets a Perl CGI script's requirements before you buy/download and try to install it.</p><br class="clearall"></div>
+
+<h4><a href="/software/pitphp/index.php">PHP Pre-Installation Tester</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/pitphp/index.php"></a></div>
+<div class="indent"><p>Test your server to see if it meets a PHP script's requirements before you buy/download and try to install it. Free software.</p><br class="clearall"></div>
+
+<h4><a href="/software/secureview/index.php">Secure View and Remove</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/secureview/index.php"></a></div>
+<div class="indent"><p>Remove the data from your secure server safely, without compromising your customer's trust.</p><br class="clearall"></div>
+
+<h4><a href="/software/shorturl/index.php">Short URL V3</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/shorturl/index.php"><img src="//www.willmaster.com/software/productimages/shortURLv3.jpg" width="75" border=0></a></div>
+<div class="indent"><p>Short URL and click tracking with one PHP/MySQL software package.</p><br class="clearall"></div>
+
+
+<!-- *** Added "Click here to hide individual titles" link. -->
+<p style="text-align:right">
+<a href="javascript:GlobalDisplayManagement('automationcat=none','automationcatreveal=block')">Click here</a> to hide individual titles.
+</p><br class="clearall">
+</div>
+
+
+<!-- *** Disabled redundant div open. -->
+<!-- <div class="content"> -->
+
+<h2 style="margin-top:50px;text-align:left;"> <a href="//www.willmaster.com/software/form-handlers/index.php">Form Handler Software </a></h2>
+<p class="bold indent">
+Software to manage your web page forms. <br>A variety of options.</p>
+
+<!-- *** Edited "Click here..." -->
+<p id="handlerscatreveal">
+<a href="javascript:GlobalDisplayManagement('handlerscat=block','handlerscatreveal=none')">Click here</a> to view individual titles.
+</p>
+
+<!-- *** Added div and "Click here to hide individual titles" link. -->
+<div id="handlerscat" style="display:none;">
+<p style="text-align:right">
+<a href="javascript:GlobalDisplayManagement('handlerscat=none','handlerscatreveal=block')">Click here</a> to hide individual titles.
+</p>
+
+<h4><a href="https://spamfreeform.com/">Spam-free Form</a></h4>
+<div style="float:left;margin-right:10px;"><a href="https://spamfreeform.com/"><img src="http://spamfreeform.com/images/logo/SFF-logo.png" style="width:100px; height:100px; border:none; outline:none;" alt="Spam-free Form logo" name="Spam-free Form logo"></a></div>
+<div class="indent">
+<p>
+The <a href="https://spamfreeform.com/">Spam-free Form</a> service is now live, built by Willmaster and delivered at <a href="https://spamfreeform.com/">SpamFreeForm.com</a>. Custom and pre-built forms, all spam-free because spambots don't see them &mdash; they can't spam what they don't see. Easy form installation (paste one line of JavaScript).
+</p><br class="clearall">
+</div>
+
+
+<h4><a href="/software/formPHP/index.php">Master Form .PHP</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/formPHP/index.php"><img src="//www.willmaster.com/software/productimages/masterformPHP.jpg" width="100" border=0></a></div>
+<div class="indent"><p>This is a PHP/MySQL software inspired by the Perl CGI software Master Form V4. Not all functions are available in both versions. See the sales page for a comparison chart.</p><br class="clearall"></div>
+
+<h4><a href="/software/formV4/index.php">Master Form V4</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/formV4/index.php"><img src="//www.willmaster.com/software/productimages/vsmformV4.jpg" width="100" border=0></a></div>
+<div class="indent"><p>Anytime you need to interact with people through your website, Master Form V4 can handle it.
+Each time you put a new kind of form on your website you increase the opportunities to interact with your visitors.</p><br class="clearall"></div>
+
+<h4><a href="/software/feedback/index.php">Willmaster Feedback</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/feedback/index.php"></a></div>
+<div class="indent"><p>A spam-resistant form handler. PHP. Resists form spam 2 ways.</p><br class="clearall"></div>
+
+
+<!-- *** Added "Click here to hide individual titles" link. -->
+<p style="text-align:right">
+<a href="javascript:GlobalDisplayManagement('handlerscat=none','handlerscatreveal=block')">Click here</a> to hide individual titles.
+</p>
+</div>
+
+
+<!-- *** Disabled redundant div open. -->
+<!-- <div class="content"> -->
+
+<h2 style="margin-top:50px;text-align:left;"><a href="//www.willmaster.com/software/website-features/index.php">WebSite Features Software</a> </h2>
+<p class="bold indent">
+Software to interact with your visitors and get their attention.
+</p>
+
+<!-- *** Edited "Click here..." -->
+<p id="visitorscatreveal">
+<a href="javascript:GlobalDisplayManagement('visitorscat=block','visitorscatreveal=none')">Click here</a> to view individual titles.
+</p>
+
+<!-- *** Added div and "Click here to hide individual titles" link. -->
+<div id="visitorscat" style="display:none;">
+<p style="text-align:right">
+<a href="javascript:GlobalDisplayManagement('visitorscat=none','visitorscatreveal=block')">Click here</a> to hide individual titles.
+</p>
+
+
+<h4><a href="/software/attentionticker/index.php">Attention Ticker</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/attentionticker/index.php"></a></div>
+<div class="indent"><p>Scrolling text banner is perfect for
+special offers... news feeds... syndication to other sites ...</p><br class="clearall"></div>
+
+<h4><a href="/software/membersonly/index.php">Master Members Only V3</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/membersonly/index.php"><img src="//www.willmaster.com/software/productimages/vsmmembersonly.jpg" width="100" border=0></a></div>
+<div class="indent"><p>Master Members Only V3 has over 30+ exciting features to help you maintain your own members-only or restricted access site.</p><p> 
+This software handles your restricted access site with
+any number of pages and any number of members. You have room to grow with MMO.</p><br class="clearall"></div>
+
+<h4><a href="/software/quiz/index.php">Quiz Manager</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/quiz/index.php"><img src="//www.willmaster.com/software/images/quizmanager.jpg" width="100" border=0></a></div>
+<div class="indent"><p>Quiz Manager will create and manage quizzes administered on a web page. Use Quiz Manager to assess skill, experience, satisfaction, personality or other criteria.</p><br class="clearall"></div>
+
+<h4><a href="/software/like/index.php">WillMaster LIKE</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/like/index.php"></a></div>
+<div class="indent"><p><b>WillMaster LIKE</b> is a "like" counter for your website &ndash; without having to go through Facebook.</p><br class="clearall"></div>
+
+
+<!-- *** Added "Click here to hide individual titles" link. -->
+<p style="text-align:right">
+<a href="javascript:GlobalDisplayManagement('visitorscat=none','visitorscatreveal=block')">Click here</a> to hide individual titles.
+</p>
+</div>
+
+
+
+<h2 style="margin-top:50px;text-align:left;"><a href="//www.willmaster.com/software/WPplugins/">WordPress Plugins</a> </h2>
+
+<p class="bold indent">Extend the functionality of WordPress. </p>
+
+<!-- *** Edited "Click here..." -->
+<p id="wordpresscatreveal">
+<a href="javascript:GlobalDisplayManagement('wordpresscat=block','wordpresscatreveal=none')">Click here</a> to view individual titles.
+</p>
+
+<!-- *** Added div and "Click here to hide individual titles" link. -->
+<div id="wordpresscat" style="display:none;">
+<p style="text-align:right">
+<a href="javascript:GlobalDisplayManagement('wordpresscat=none','wordpresscatreveal=block')">Click here</a> to hide individual titles.
+</p>
+
+
+<h4><a href="/software/WPplugins/insert-here-wordpress-plugin.php">Insert Here WordPress Plugin</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/WPplugins/insert-here-wordpress-plugin.php"></a></div>
+<div class="indent"><p>Insert content of any publicly-accessible URL on the Internet into any WordPress post or page.</p><br class="clearall"></div>
+
+<h4><a href="/software/WPplugins/insert-php-wordpress-plugin.php">Insert PHP (version <2.0) WordPress Plugin</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/WPplugins/insert-php-wordpress-plugin.php"></a></div>
+<div class="indent"><p>Run PHP code inserted into WordPress posts and pages.</p><br class="clearall"></div>
+
+<h4><a href="/software/WPplugins/local-syndication-wordpress-plugin.php">Local Syndication WordPress Plugin</a>
+</h4>
+<div style="float:left;margin-right:10px;"><a href="/software/WPplugins/local-syndication-wordpress-plugin.php"></a></div>
+<div class="indent"><p>Insert the content of any page/file/script output on the Internet into any WordPress post or page.</p><br class="clearall"></div>
+
+
+<!-- *** Added "Click here to hide individual titles" link. -->
+<p style="text-align:right">
+<a href="javascript:GlobalDisplayManagement('wordpresscat=none','wordpresscatreveal=block')">Click here</a> to hide individual titles.
+</p>
+</div>
+
+
+
+
+
+<h2 style="margin-top:50px;">Software Collection </h2>
+<p class="indent"><b>Many tools in one easy to find location.</b></p>
+<h3><a href="//www.willmaster.com/software/WebSitesSecret/">WebSite's Secret for WebSite Owners</a></h3>
+
+<div ><p>Developing one website... or hundreds of sites? You need tools.</p>
+<div ><a href="//www.willmaster.com/software/WebSitesSecret/"><img style="float:right;margin-right:80px;" src="//www.willmaster.com/08images/wslogo150x156.jpg" width="100" alt="WebSite's Secret" title="WebSite's Secret" border=0></a>
+</div>
+
+<ul style="line-height:150%;">
+<li>Exclusive Downloadable Software for your WebSite</li>
+<li>Generators/Online Service</li>
+<li>Tutorials</li>
+<li>Free Expert Advice</li>
+<li>50% discount on Willmaster software</li>
+<li><b>Permanent Membership</b> (No renewal fees)</li>
+<li><a href="//www.willmaster.com/software/WebSitesSecret/">Many additional benefits</a></li>
+</ul>
+<br class="clearall"></div>
+
+
+
+
+<h3 style="margin-top:70px;">Not Finding What You Are Looking For? </h3>
+<p><a href="//www.willmaster.com/contact.php">Click here and tell us about it.</a></p>
+
+
+</div><!-- id="the-main-content-column" -->
+
+
+<div id="the-right-content-column">
+
+
+
+<script src="https://www.willmaster.com/php-bin/SFF/SFF_FORM.php"></script>
+<h3 style="margin-top:50px; margin-bottom:50px; text-align:center;">Need Custom Software?<br>
+<a href="javascript:SFF_Show()">Click to<br>tell us about<br>your project.</a>
+</h3>
+
+
+
+<!-- Entire How Can We Help You? Container -->
+<div style="width:250px; background-color:white; border:none; padding-bottom:25px; Xborder-radius:3xp; margin:0 auto;">
+
+<div style="text-align:center; padding-top:9px;">
+<img src="https://www.willmaster.com/images/how-can-we-help-you/balloons.png" 
+    style="width:100%; max-width:240px; border:none; outline:none;" alt="How Can We Help You? balloons">
+</div>
+
+<div style="position:relative; top:-4px; white-space:nowrap; color:#cc3333; font-size:21px; font-weight:bold; text-align:center;">How Can We Help You?</div>
+
+<div style="padding-left:7px; padding-top:25px;"><!-- linked bullets container -->
+
+<div style="font-size:18px; white-space:nowrap; margin-bottom:20px;">
+<img src="https://www.willmaster.com/images/how-can-we-help-you/green-dot.png" 
+    style="vertical-align:-5px; width:24px; height:24px; border:none; outline:none;" 
+    alt="bullet"> 
+    <a href="http://www.willmaster.com/2/HCWHUcustom">Custom Programming</a>
+</div>
+
+<div style="font-size:18px; white-space:nowrap; margin-bottom:20px;">
+<img src="https://www.willmaster.com/images/how-can-we-help-you/blue-dot.png" 
+    style="vertical-align:-5px; width:24px; height:24px; border:none; outline:none;" 
+    alt="bullet"> 
+    <a href="http://www.willmaster.com/2/HCWHUsoftware">Ready-Made Software</a>
+</div>
+
+<div style="font-size:18px; white-space:nowrap; margin-bottom:20px;">
+<img src="https://www.willmaster.com/images/how-can-we-help-you/yellow-dot.png" 
+    style="vertical-align:-5px; width:24px; height:24px; border:none; outline:none;" 
+    alt="bullet"> 
+    <a href="http://www.willmaster.com/2/HCWHUsupport">Technical Support</a>
+</div>
+
+<div style="font-size:18px; white-space:nowrap; margin-bottom:20px;">
+<img src="https://www.willmaster.com/images/how-can-we-help-you/red-dot.png" 
+    style="vertical-align:-5px; width:24px; height:24px; border:none; outline:none;" 
+    alt="bullet"> 
+    <a href="http://www.willmaster.com/2/HCWHUpossibilities">Possibilities Newsletter</a>
+</div>
+
+<div style="font-size:18px; white-space:nowrap; margin-bottom:20px;">
+<img src="https://www.willmaster.com/images/how-can-we-help-you/pink-dot.png" 
+    style="vertical-align:-5px; width:24px; height:24px; border:none; outline:none;" 
+    alt="bullet"> 
+    <a href="http://www.willmaster.com/2/HCWHUlibrary">Website "How-To" Info</a>
+</div>
+
+<div style="font-size:18px; white-space:nowrap; margin-bottom:20px;">
+<img src="https://www.willmaster.com/images/how-can-we-help-you/indigo-dot.png" 
+    style="vertical-align:-5px; width:24px; height:24px; border:none; outline:none;" 
+    alt="bullet"> 
+    <a href="http://www.willmaster.com/2/HCWHUinformation">Useful Information List</a>
+</div>
+
+</div><!-- linked bullets container -->
+
+</div><!-- Entire How Can We Help You? Container -->
+
+
+
+
+
+
+
+
+<div class="morecontent-noborder">
+
+<div style="display: block;
+    margin-left: auto;
+    margin-right: auto">
+<!-- ad code -->
+<div style="text-align:center; ">
+<a href="http://www.willmaster.com/php-bin/cam/camlink.php?top_at_left_.26">
+<h3>Protect Your MySQL Data
+</h3>
+<img src="//www.willmaster.com/software/db-backup-restore/images/DB-backup-restore.jpg" width="100px" border=0>
+<p></p>
+<p>Could you replace your data if it got damaged or destroyed?</p>
+</a>
+</div><!-- /ad code --></div>
+
+</div>
+
+<div class="morecontent-noborder">
+<div style="text-align:center">
+<a href="//www.willmaster.com/download/DownloadHandlerLink.php?file=Catalog.zip"><img  src="//www.willmaster.com/software/productimages/catalogcollection.jpg" width="240" height="240" border="0" alt="Download the Catalog" title="Download the Catalog"></a>
+
+<h3 style="margin-top:30px;margin-bottom:30px;">
+<a href="//www.willmaster.com/download/DownloadHandlerLink.php?file=Catalog.zip">Click to download the <span style="white-space:nowrap;">WillMaster Software Catalog</span></a>
+</h3>
+</div>
+</div>
+<div class="morecontent-noborder">
+
+
+
+
+</div>
+
+
+</div><!-- id="the-right-content-column" -->
+
+</div><!-- id="content-container" -->
+
+<div class="only-for-browser">
+
+
+
+<!-- BEGIN footer -->
+
+<div id="footer-container">
+
+<div class="footer">
+
+
+<div style="position:relative; display:table; margin:0 auto;">
+<a href='/contact.php'><span style="white-space:nowrap;">Contact</span></a> | <a href='/terms-of-use.php'><span style="white-space:nowrap;">Terms of Use</span></a> | <a href='/privacy-policy.php'><span style="white-space:nowrap;">Privacy Policy</span></a> | <a href='/aboutus.php'><span style="white-space:nowrap;">About Us</span></a></div><!-- class="footer-nav" -->
+
+
+</div><!-- "position:relative;" -->
+
+
+<div style="float:right; position:relative; top:-15px;">
+<div style="width:90px; height:90px; border:none; padding:0; &#98;&#97;&#99;&#107;&#103;&#114;&#111;&#117;&#110;&#100;&#45;&#105;&#109;&#97;&#103;&#101;&#58;&#32;&#117;&#114;&#108;&#40;&#39;&#104;&#116;&#116;&#112;&#115;&#58;&#47;&#47;&#99;&#104;&#97;&#109;&#98;&#101;&#114;&#111;&#102;&#99;&#111;&#109;&#109;&#101;&#114;&#99;&#101;&#45;&#111;&#110;&#116;&#104;&#101;&#119;&#101;&#98;&#46;&#99;&#111;&#109;&#47;&#109;&#108;&#47;&#109;&#101;&#109;&#98;&#101;&#114;&#45;&#108;&#111;&#103;&#111;&#46;&#112;&#110;&#103;&#39;&#41;&#59; background-repeat:no-repeat; background-position:center center;">
+<a href="//chamberofcommerce-ontheweb.com/cgi-bin/mem/jl.pl?1002" target="_blank"><img src="&#104;&#116;&#116;&#112;&#115;&#58;&#47;&#47;&#99;&#104;&#97;&#109;&#98;&#101;&#114;&#111;&#102;&#99;&#111;&#109;&#109;&#101;&#114;&#99;&#101;&#45;&#111;&#110;&#116;&#104;&#101;&#119;&#101;&#98;&#46;&#99;&#111;&#109;&#47;&#109;&#108;&#47;&#71;&#108;&#97;&#115;&#115;&#73;&#109;&#97;&#103;&#101;&#46;&#103;&#105;&#102;" alt="Chamber of Commerce - on the Web logo" title="Member: Chamber of Commerce - on the Web" width="90" height="90" border="0" /></a>
+</div>
+</div><!-- "float:right;" -->
+
+<div style="float:right;">
+<img src="/images/gsiuczutriwyi.gif" style="border:none; outline:none;">
+</div>
+
+<div style="float:left;" class="small">
+&copy; 1998-2001 <span class="nowrap">William and Mari Bontrager</span>
+<br>&copy; 2001-2011 <span class="nowrap">Bontrager Connection, LLC</span>
+<br>&copy; 2011-2019 <span class="nowrap">Will Bontrager Software LLC</span>
+</div>
+
+
+
+</div> <!--id="footer" -->
+
+</div><!-- id="footer-container" -->
+
+<!-- END footer -->
+<script src="/php-bin/CTPstatRecording.php?JS"></script>
+
+
+
+<!-- Will be copied into search box spot further above on page. -->
+
+
+
+
+
+<script>
+function BrowserAccessInfo()
+{
+	var part = "/php-bin";
+	var portend = "browserstats.php";
+	if( ! navigator.cookieEnabled ) { return; }
+	document.cookie = "Test_cookie=TESTING";
+	if( document.cookie.indexOf("Test_cookie") < 0 ) { return; }
+	http = new XMLHttpRequest();
+	if( ! http ) { return; }
+	var params = new Array();
+	params.push( "hereURL=" + encodeURIComponent(document.URL) );
+	params.push( "hereReferrer=" + encodeURIComponent("http://www.web-source.net/web_development/aligning_text_graphics.htm") );
+	params.push( "hereIP=" + encodeURIComponent("184.217.99.203") );
+	params.push( "hereMethod=" + encodeURIComponent("GET") );
+	params.push( "hereUA=" + encodeURIComponent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36") );
+	http.onreadystatechange = function(){}
+	http.open("POST",part+"/dailystats/"+portend,true);
+	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	http.send(params.join("&"));
+}
+BrowserAccessInfo();
+</script>
+
+<script src="https://www.willmaster.com/js/2014entiresite.js?20180715"></script>
+
+
+
+
+
+</div><!-- class="only-for-browser" -->
+
+<div class="only-for-printer">
+<p class="small">&copy; 1998-2001 William and Mari Bontrager
+<br />
+&copy; 2001-2011 Bontrager Connection, LLC
+<br />&copy; 2011-2019 Will Bontrager Software LLC
+</p>
+</div><!-- class="only-for-printer" -->
+
+
+</body>
+</html>
